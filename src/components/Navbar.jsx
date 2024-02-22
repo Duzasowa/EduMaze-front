@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div
-      className="flex items-center justify-between w-full px-4 bg-black text-white"
-      style={{ height: 60 }}
+      className="flex items-center justify-between w-full px-4 text-white"
+      style={{ height: 60, backgroundColor: "#040D12" }}
     >
       <Link to="/" className="font-bold">
         Project-01
