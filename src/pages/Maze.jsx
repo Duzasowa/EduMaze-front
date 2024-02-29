@@ -10,7 +10,7 @@ const Maze = () => {
   const [mazeHeight, setMazeHeight] = useState();
   const [mazeData, setMazeData] = useState([]);
   const [isVisible, setIsVisible] = useState(true); // State to control visibility
-  const [activeButton, setActiveButton] = useState(1); // To control the active buttonою
+  const [activeAlgorithm, setActiveAlgorithm] = useState("dfs"); // To control the active buttonою
 
   const fetchMaze = async () => {
     const height = Number(mazeHeight);
@@ -28,6 +28,7 @@ const Maze = () => {
       const response = await axios.post("http://127.0.0.1:5000/get-maze", {
         width,
         height,
+        algorithm: "dfs",
       });
       setMazeData(response.data);
     } catch (error) {
@@ -51,8 +52,8 @@ const Maze = () => {
           mazeHeight={mazeHeight}
           setMazeHeight={setMazeHeight}
           fetchMaze={fetchMaze} // Fetches maze data based on the current settings
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
+          activeAlgorithm={activeAlgorithm}
+          setActiveAlgorithm={setActiveAlgorithm}
         />
 
         {/* Space for the generated maze */}

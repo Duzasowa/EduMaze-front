@@ -9,8 +9,8 @@ const MazeSettingsPanel = ({
   mazeHeight,
   setMazeHeight,
   fetchMaze, // Fetches maze data based on the current settings
-  activeButton,
-  setActiveButton,
+  activeAlgorithm,
+  setActiveAlgorithm,
 }) => {
   return (
     <div
@@ -96,11 +96,11 @@ const MazeSettingsPanel = ({
               style={{
                 width: "100%",
                 backgroundColor:
-                  activeButton === 1 ? "rgb(4 209 182)" : "#008170",
+                  activeAlgorithm === "bfs" ? "rgb(4 209 182)" : "#008170",
                 height: 50,
                 borderRadius: 8,
               }}
-              onClick={() => setActiveButton(1)}
+              onClick={() => setActiveAlgorithm("bfs")}
             >
               Breadth-First Search (BFS)
             </button>
@@ -108,12 +108,11 @@ const MazeSettingsPanel = ({
               style={{
                 maxWidth: "100%",
                 backgroundColor:
-                  activeButton === 2 ? "rgb(4 209 182)" : "#008170",
+                  activeAlgorithm === "dfs" ? "rgb(4 209 182)" : "#008170",
                 height: 50,
                 borderRadius: 8,
-                cursor: "unset",
               }}
-              // onClick={() => setActiveButton(2)}
+              onClick={() => setActiveAlgorithm("dfs")}
             >
               Depth-First Search (DFS)
             </button>
@@ -121,7 +120,7 @@ const MazeSettingsPanel = ({
               style={{
                 maxWidth: "100%",
                 backgroundColor:
-                  activeButton === 3 ? "rgb(4 209 182)" : "#008170",
+                  activeAlgorithm === "da" ? "rgb(4 209 182)" : "grey",
                 height: 50,
                 borderRadius: 8,
                 cursor: "unset",

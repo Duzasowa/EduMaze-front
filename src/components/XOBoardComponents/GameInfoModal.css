@@ -1,0 +1,30 @@
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(
+      107,
+      114,
+      128,
+      0.5
+    ); /* bg-gray-600 with bg-opacity-50 */
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
