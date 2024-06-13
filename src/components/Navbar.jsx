@@ -8,7 +8,7 @@ const Navbar = () => {
       style={{ height: 60, backgroundColor: "#040D12" }}
     >
       <Link to="/" className="font-bold">
-        Project-01
+        EduMaze
       </Link>
       <div>
         <Link to="/maze" className="px-4 py-2 hover:bg-gray-700 rounded">

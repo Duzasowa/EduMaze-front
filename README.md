@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# EduMaze Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduMaze Frontend is a React-based user interface for the EduMaze project. It demonstrates various algorithms including maze solving algorithms (BFS, DFS) and the game of Tic-Tac-Toe with an AI opponent.
 
-## Available Scripts
+![Maze Page](src/assets/images/maze.png)
 
-In the project directory, you can run:
+![Tic-Tac-Toe Page](src/assets/images/XOBoard.png)
 
-### `npm start`
+### Description of Main Files
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### 1. `src/index.js`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This file is the entry point of the React application. It renders the root component (`App`) into the DOM.
 
-### `npm test`
+#### 2. `src/App.js`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This file defines the main routing of the application. It sets up routes for the home page, the maze page, and the Tic-Tac-Toe page.
 
-### `npm run build`
+#### 3. `src/pages/XOBoard.jsx`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This file contains the logic and UI for the Tic-Tac-Toe game, including handling player moves and updating the game state based on the server response.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 4. `src/pages/Maze.jsx`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This file contains the logic and UI for generating and displaying the maze based on user input and server response.
 
-### `npm run eject`
+#### 5. `src/pages/Home.jsx`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This file contains the UI for the home page of the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 6. `src/components/XOBoardComponents/GameInfoModal.jsx`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This file contains the modal component displayed at the end of a Tic-Tac-Toe game, showing the result and offering to start a new game.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### 7. `src/components/MazeComponents/MazeSettingsPanel.jsx`
 
-## Learn More
+This file contains the settings panel component for the maze generation page, allowing the user to input maze parameters and select the algorithm.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 8. `src/hook/useReactToastify.jsx`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This file contains a custom hook for displaying toast notifications using `react-toastify`.
 
-### Code Splitting
+### Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Prerequisites
 
-### Analyzing the Bundle Size
+- Node.js
+- npm or yarn
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Installation
 
-### Making a Progressive Web App
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Install the dependencies:
 
-### Advanced Configuration
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Start the development server:
+   ```sh
+   npm start
+   # or
+   yarn start
+   ```
 
-### Deployment
+The application should now be running at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Usage
 
-### `npm run build` fails to minify
+#### Navigating the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Home Page:** Provides an entry point to navigate to either the maze generation page or the Tic-Tac-Toe game page.
+- **Maze Page:** Allows users to input maze dimensions and select an algorithm (BFS or DFS) to generate and display a maze.
+- **Tic-Tac-Toe Page:** Allows users to play a game of Tic-Tac-Toe against an AI opponent. The game state is managed and updated based on server responses.
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+### License
+
+This project is licensed under the MIT License.
